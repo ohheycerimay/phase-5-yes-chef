@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2023_01_09_211349) do
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.string "catagory"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 2023_01_09_211349) do
     t.string "name"
     t.string "username"
     t.string "password_digest"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
