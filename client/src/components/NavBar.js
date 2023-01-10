@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Login(props) {
+function NavBar(props) {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function Login(props) {
     );
 }
 
-export default Login;
+export default NavBar;
