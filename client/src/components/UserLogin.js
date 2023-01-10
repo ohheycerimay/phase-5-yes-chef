@@ -38,7 +38,7 @@ function UserLogin({ onLogin }) {
 
 return (
     <nav>
-    <Link className="navlink" to="/signup">Not already a user? Sign up!</Link>
+    <Link className="signup-link" to="/signup">Not already a user? Sign up!</Link>
     <form  className="login-form" onSubmit={handleSubmit}>
     
         <label htmlFor="username">Username</label>

@@ -9,14 +9,13 @@ import SignUp from './components/SignUp';
 import OrderForm from './components/OrderForm';
 import NavBar from './components/NavBar';
 
-
 function App() {
 
   const [ingredients, setIngredients] = useState([])
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    async function fetchData() {
+    (async () => {
       const response1 = await fetch('/me');
       const user = await response1.json();
       setUser(user);
@@ -24,15 +23,9 @@ function App() {
       const response2 = await fetch('/ingredients');
       const ingredients = await response2.json();
       setIngredients(ingredients);
-    }
-    fetchData();
+    })()
+    
   }, []);
-
-  // useEffect(() => {
-  //   fetch('/ingredients')
-  //   .then(r => r.json())
-  //   .then(data => setIngredients(data))
-  // }, [])
 
   return (
     <div className="App">
