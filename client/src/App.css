@@ -1,12 +1,7 @@
-.App {
-  text-align: center;
-  background-color: #Fa9584;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
+body{
+  background-color: #Fa9584;
+}
 
 .ingredient-card {
   display: flex;
@@ -134,11 +129,37 @@
       color: #FAF9F6;
       font-size: 16px;
       cursor: pointer;
+      margin-left: 93.5%;
     }
     
     .logout-button:hover {
       background-color: #ccc;
     }
 
-  
+    .profile_pic {
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+      
+    }
+    .profile_container {
+      display: flex;
+      margin-left: 80%;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 2%;
+    }
+    
+    .profile_greeting {
+      font-family: "Montserrat", sans-serif;
+      color: #FAF9F6;
+      text-decoration: none;
+      font-size: .6em;
+      text-transform: uppercase;
+      font-weight: 500;
+      display: block-right;
+      width: 80px;
+      margin: 15px;
+      transition: all 0.2s ease-in-out;
+    }
     
