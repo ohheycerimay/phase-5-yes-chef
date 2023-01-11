@@ -6,10 +6,10 @@ function OrderForm({user, ingredients, setIngredients}) {
     const [showForm, setShowForm] = useState(false)
     
    
-    
     let initialFormState = {
         name: "",
         image_url: "",
+        category: "",
     }
 
     const [formData, setFormData] = useState(initialFormState)
@@ -44,6 +44,7 @@ function OrderForm({user, ingredients, setIngredients}) {
             <form id="form" onSubmit={handleSubmit}>
                 <input className="input_field" value={formData.name} placeholder="Ingredient" name="name" type="text" onChange={handleChange} />
                 <input className="input_field" value={formData.image_url} placeholder="Image Url" name="image_url" type="text" onChange={handleChange} />
+                <input className="input_field" value={formData.category} placeholder="Category" name="category" type="text" onChange={handleChange} />
                 <button className="create-button" id="create-experience-button">Create Ingredient</button>
             </form>
             </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 
 function List({ingredient}) {
+
+  
+
     return (
         <div>
         <div className="ingredient-card">

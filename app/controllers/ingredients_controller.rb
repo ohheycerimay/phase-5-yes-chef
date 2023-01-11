@@ -48,7 +48,7 @@ class IngredientsController < ApplicationController
 
     private
     def ingredient_params
-        params.permit(:name, :image_url, :catagory)
+        params.permit(:name, :image_url, :category)
     end
 
 end
