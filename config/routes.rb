@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :ingredients, only: [:index, :show, :create, :update, :destroy]
-  resources :stocks
+  resources :stocks, only: [:index, :show, :create, :update, :destroy]
   
   # resources :users
 

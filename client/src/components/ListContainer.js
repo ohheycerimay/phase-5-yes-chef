@@ -15,3 +15,4 @@ function ListContainer({ingredients, handleDeleteIngredient}) {
 }
 
 export default ListContainer;
+

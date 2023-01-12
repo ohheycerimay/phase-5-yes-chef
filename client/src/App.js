@@ -42,7 +42,7 @@ function App() {
         <Route path="/orderform" element={<OrderForm user={user} setIngredients={setIngredients} ingredients={ingredients}/>}/>
         <Route path="/logout" element={<LogoutPage user={user} setUser = {setUser}/>}/>
         <Route path="*" element={<NotFound/>} />
-    </Routes>
+      </Routes>
     </div>
   );
 }

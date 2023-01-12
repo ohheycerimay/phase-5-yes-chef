@@ -1,5 +1,5 @@
 class Stock < ApplicationRecord
-    belongs_to :ingredients
-    belongs_to :users
+    belongs_to :ingredient
+    belongs_to :user
     
 end
