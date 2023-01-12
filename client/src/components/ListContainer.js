@@ -3,7 +3,7 @@ import List from './List';
 
 
 
-function BigContainer({ingredients, handleDeleteIngredient}) {
+function ListContainer({ingredients, handleDeleteIngredient}) {
     return (
         <div className="box-box">
             <div className="ingredients-box"></div>
@@ -17,5 +17,5 @@ function BigContainer({ingredients, handleDeleteIngredient}) {
     );
 }
 
-export default BigContainer;
+export default ListContainer;
 

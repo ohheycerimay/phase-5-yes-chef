@@ -3,12 +3,9 @@ body{
   background-color: #Fa9584;
 }
 
-
-
 .image-container {
   display: flex;
   justify-content: center;
-
   height: 50px;
   border: 2px solid red;
   }
@@ -25,9 +22,9 @@ body{
   text-align: center;
   border: 1px solid gold;
   font-family: "Gv. time";
-    color: #6b724e;
-    font-size: 1.5rem;
-    font-weight: normal;
+  color: #6b724e;
+  font-size: 1.5rem;
+  font-weight: normal;
   } 
 
 /* LOGIN FORM */
