@@ -4,7 +4,7 @@ const headers = {
   Accepts: "application/json",
       "Content-Type" : "application/json"}
 
-function List({ingredient, handleDeleteIngredient}) {
+function List({ingredient, handleDeleteIngredient, receiveClickedOnIngredient}) {
 
     function handleDelete(id){
       handleDeleteIngredient(id)
@@ -15,7 +15,7 @@ function List({ingredient, handleDeleteIngredient}) {
     }
 
     return (
-        <div className="ingredient-card">
+        <div className="ingredient-card" onClick={(e) => receiveClickedOnIngredient(ingredient.name)}>
         <div className="image-container">
           <img className="ingredient-image" src= {ingredient.image_url} alt={ingredient.name}/>
         </div>

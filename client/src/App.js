@@ -13,6 +13,7 @@ function App() {
 
   const [ingredients, setIngredients] = useState([])
   const [user, setUser] = useState(null)
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     (async () => {
@@ -32,13 +33,15 @@ function App() {
     setIngredients(updatedIngredientArray)
   }
 
+
+
   return (
     <div className="App">
-      <NavBar user={user} setUser={setUser} />
+      <NavBar className="navbar" user={user} setUser={setUser} />
       <Routes>
         <Route exact path="/" element={<UserLogin onLogin={setUser}/>}/>
         <Route exact path="/signup" element={<SignUp onSignUp={setUser}/>}/>
-        <Route path="/ingredients" element={<ListContainer ingredients={ingredients} handleDeleteIngredient={handleDeleteIngredient}/>}/>
+        <Route path="/ingredients" element={<ListContainer ingredients={ingredients} handleDeleteIngredient={handleDeleteIngredient} />}/>
         <Route path="/orderform" element={<OrderForm user={user} setIngredients={setIngredients} ingredients={ingredients}/>}/>
         <Route path="/logout" element={<LogoutPage user={user} setUser = {setUser}/>}/>
         <Route path="*" element={<NotFound/>} />

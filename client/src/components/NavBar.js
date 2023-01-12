@@ -9,9 +9,11 @@ function NavBar({user}) {
         {user ? (
             <div className = 'profile_container'>
             <img className = 'profile_pic' src={user.profile_pic} alt={user.username} /> 
-            <h4 className='profile_greeting'>{user.username}</h4>
-            <NavLink className="order-form-button" to="/orderform">Order Form</NavLink>
+            {/* <h4 className='profile_greeting'>{user.username}</h4> */}
             <NavLink className="logout-button" to="/logout">Logout</NavLink>
+            <div>
+            <NavLink className="order-form-link" to="/orderform">Order Form</NavLink>
+              </div>
             </div>
         ): (
             <div></div>)}
