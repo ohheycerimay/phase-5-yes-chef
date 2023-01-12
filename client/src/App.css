@@ -3,29 +3,31 @@ body{
   background-color: #Fa9584;
 }
 
-.ingredient-card {
+
+
+.image-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
+  justify-content: center;
+
+  height: 50px;
+  border: 2px solid red;
   }
   
 .ingredient-image {
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
+  border-radius: 50%;
   }
   
 .ingredient-name {
+  margin: 0px;
+  text-align: center;
+  border: 1px solid gold;
   font-family: "Gv. time";
     color: #6b724e;
     font-size: 1.5rem;
     font-weight: normal;
-    margin-bottom: 5px;
   } 
 
 /* LOGIN FORM */
@@ -162,4 +164,33 @@ body{
       margin: 15px;
       transition: all 0.2s ease-in-out;
     }
-    
+
+
+    div.ingredients-box {
+      border: 2px solid blue;
+      width: 370px;
+      height: 500px;
+      margin: 50px 0 50px 0;
+      flex-wrap: wrap;
+      border-radius: 10%;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+    }
+
+    div.ingredient-card {
+      border: 2px solid chartreuse;
+      margin: 5px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+  
+    }
+
+    div.box-box {
+      border: 4px solid purple;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }

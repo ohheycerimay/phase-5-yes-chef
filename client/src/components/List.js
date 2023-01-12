@@ -15,13 +15,13 @@ function List({ingredient, handleDeleteIngredient}) {
     }
 
     return (
-        <div>
         <div className="ingredient-card">
+        <div className="image-container">
           <img className="ingredient-image" src= {ingredient.image_url} alt={ingredient.name}/>
         </div>
         <h3>
         <h3 className="ingredient-name">{ingredient.name}</h3>
-        <button onClick={() => handleDelete(ingredient.id)}>Remove From List</button>
+        {/* <button onClick={() => handleDelete(ingredient.id)}>Remove From List</button> */}
         </h3>
         </div>
     );

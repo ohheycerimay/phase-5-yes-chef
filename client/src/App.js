@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import ListContainer from './components/ListContainer';
+import BigContainer from './components/ListContainer';
 import UserLogin from './components/UserLogin';
 import {Route, Routes} from 'react-router-dom';
 import NotFound from './components/NotFound';
@@ -38,7 +38,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<UserLogin onLogin={setUser}/>}/>
         <Route exact path="/signup" element={<SignUp onSignUp={setUser}/>}/>
-        <Route path="/ingredients" element={<ListContainer ingredients={ingredients} handleDeleteIngredient={handleDeleteIngredient}/>}/>
+        <Route path="/ingredients" element={<BigContainer ingredients={ingredients} handleDeleteIngredient={handleDeleteIngredient}/>}/>
         <Route path="/orderform" element={<OrderForm user={user} setIngredients={setIngredients} ingredients={ingredients}/>}/>
         <Route path="/logout" element={<LogoutPage user={user} setUser = {setUser}/>}/>
         <Route path="*" element={<NotFound/>} />
