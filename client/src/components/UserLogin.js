@@ -1,9 +1,6 @@
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom'
-import {Link} from 'react-router-dom'
-
-
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function UserLogin({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -25,22 +22,22 @@ function UserLogin({ onLogin }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user),
-        navigate("/ingredients"));
+        r.json().then((user) => onLogin(user), navigate("/ingredients"));
       } else {
-        r.json().then((err) =>{
+        r.json().then((err) => {
           console.log(err);
-          setErrors(err.errors)}
-          );
+          setErrors(err.errors);
+        });
       }
     });
   }
 
-return (
+  return (
     <nav>
-    <Link className="signup-link" to="/signup">Not already a user? Sign up!</Link>
-    <form  className="login-form" onSubmit={handleSubmit}>
-    
+      <Link className="signup-link" to="/signup">
+        Not already a user? Sign up!
+      </Link>
+      <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
         <input
           class="username"
@@ -68,8 +65,7 @@ return (
         {errors.map((err) => (
           <error key={err}>{err}</error>
         ))}
-
-    </form>
+      </form>
     </nav>
   );
 }
