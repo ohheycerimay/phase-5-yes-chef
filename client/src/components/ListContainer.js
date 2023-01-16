@@ -21,7 +21,6 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch 
     });
     console.log(resultOfFind);
     //if resultOfFind is null - this will break!
-
     setMenus([...menus, resultOfFind]);
   };
 
@@ -29,7 +28,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch 
     e.preventDefault() 
     setSearch(e.target.value)
   }
-
+  console.log({menus})
   function handleSubmit() {
     setSearch('');
   }
@@ -45,12 +44,18 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch 
         </div>
       </div>
       <div className="big-ingredients-box">
-      <h3>Ingredients</h3>
-      <input className="search-bar" type="text" placeholder="search..." value={search} onChange={handleSearch}/>
+        <div className="container-header">
+          <h3>Ingredients</h3>
+        <div className="search-container">
+
+          <input className="search-bar" type="text" placeholder="search..." value={search} onChange={handleSearch}/>
       <button onSubmit={handleSubmit} type="submit" className='search-btn'>Search Ingredients</button>
+        </div>
+        </div>
         <div className="ingredients-box">
           {ingredients.map((ingredient) => (
             <List
+              selected={menus.some(item => (item.ingredient.id === ingredient.id))}
               key={ingredient.id}
               ingredient={ingredient}
               handleDeleteIngredient={handleDeleteIngredient}

@@ -40,7 +40,7 @@ function OrderForm({ user, ingredients, setIngredients }) {
       <Link className="ingredients-link" to="/ingredients">
         Go Back
       </Link>
-      <div>
+      <div className="form-group">
         <form id="form" onSubmit={handleSubmit}>
           <input
             className="input_field"

@@ -1,21 +1,57 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  background-image: url("https://wallpaper.dog/large/20449802.jpg");
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+  /* background-image: url("https://wallpaper.dog/large/20449802.jpg"); */
   /* background-color: #Fa9584; */
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  height: 50px;
-
-  /* border: 2px solid red; */
-}
-
-.ingredient-image {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
 }
 
 .stock-image {
@@ -25,15 +61,7 @@ body {
   border-radius: 50%;
 }
 
-.ingredient-name {
-  margin: 0px;
-  text-align: center;
-  /* border: 1px solid gold; */
-  font-family: "Gv. time";
-  color: #6b724e;
-  font-size: 1.5rem;
-  font-weight: normal;
-}
+
 
 /* LOGIN FORM */
 
@@ -167,6 +195,33 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+div.big-ingredients-box {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+}
+
+div, h3 {
+  /* border: 1px solid red; */
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.search-container {
+  display: flex;
+  align-items: center;
+  /* align-items: center;
+  flex-direction: column; */
+}
+
+.search-container > input, button {
+  margin-right: 10px;
+  height: 50px;
+}
+
 .ingredients-box {
   background: #fadb6a;
   opacity: 0.8;
@@ -181,6 +236,55 @@ body {
   justify-content: center;
 }
 
+/* INGREDIENT CARD */
+div.ingredient-card {
+  border: 2px solid chartreuse;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  /* opacity: 1; */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  /* border: 2px solid red; */
+}
+
+.ingredient-card h4 {
+  margin: 0px;
+  line-height: 20px;
+}
+
+.ingredient-card.selected {
+  background-color: aquamarine;
+}
+
+.ingredient-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ingredient-name {
+  margin: 0px;
+  text-align: center;
+  /* border: 1px solid gold; */
+  font-family: "Gv. time";
+  color: #6b724e;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* STOCK BOX */
+
+div.stock-box {
+}
+
 .ingredients-box-1 {
   background: #fadb6a;
   opacity: 0.8;
@@ -190,30 +294,30 @@ body {
   margin: 50px 0 50px 0;
   flex-wrap: wrap;
   border-radius: 10%;
+  padding: 35px 15px 30px 5px;
   overflow-y: scroll;
   display: flex;
-  justify-content: center;
-}
-
-div.ingredient-card {
-  /* border: 2px solid chartreuse; */
-  margin: 5px;
-  width: 100px;
-  height: 100px;
-  display: flex;
   flex-direction: column;
-  /* opacity: 1; */
+
 }
 
 div.stock-card {
-  /* border: 2px solid chartreuse; */
+  border: 2px solid lavender;
   margin: 5px;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 40px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   /* opacity: 1; */
 }
+
+.stock-card span.label {
+  font-weight: bold;
+  margin-left: 10px; 
+}
+/* div.stock-card:first-of-type {
+  margin-top: 50px;
+} */
 
 div.box-box {
   /* background: white; */
@@ -250,6 +354,13 @@ h3 {
   font-size: 2.5rem;
   color: #6b724e;
   display: flex;
+}
+
+h4{
+  font-family: "Gv. time";
+  font-size: 1.5rem;
+  color: #6b724e;
+  display: flex;
   justify-content: center;
 }
 
@@ -280,3 +391,4 @@ input.search-bar{
   font-family: "Gv. time";
   font-size: 1.2em;
 }
+

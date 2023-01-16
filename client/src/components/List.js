@@ -7,6 +7,7 @@ const headers = {
 
 function List({
   ingredient,
+  selected,
   handleDeleteIngredient,
   receiveClickedOnIngredient,
 }) {
@@ -18,9 +19,11 @@ function List({
     });
   }
 
+  // boolean prop "selected"
+
   return (
     <div
-      className="ingredient-card"
+      className={selected ? 'ingredient-card selected' : 'ingredient-card'}
       onClick={(e) => receiveClickedOnIngredient(ingredient.name)}
     >
       <div className="image-container">
