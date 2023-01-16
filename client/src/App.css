@@ -45,12 +45,13 @@ q:before, q:after {
 }
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing: .2;
 }
 
 
 body {
-  /* background-image: url("https://wallpaper.dog/large/20449802.jpg"); */
+  background-image: url("https://wallpaper.dog/large/20449802.jpg");
+  opacity: 4;
   /* background-color: #Fa9584; */
 }
 
@@ -238,7 +239,7 @@ div.search-container {
 
 /* INGREDIENT CARD */
 div.ingredient-card {
-  border: 2px solid chartreuse;
+  /* border: 2px solid chartreuse; */
   margin: 5px;
   width: 100px;
   height: 100px;
@@ -260,7 +261,8 @@ div.ingredient-card {
 }
 
 .ingredient-card.selected {
-  background-color: aquamarine;
+  background-color: #e6e2e0;
+  border-radius: 50%;
 }
 
 .ingredient-image {
@@ -283,6 +285,7 @@ div.ingredient-card {
 /* STOCK BOX */
 
 div.stock-box {
+  overflow-y: scroll;
 }
 
 .ingredients-box-1 {
