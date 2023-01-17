@@ -39,7 +39,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch 
         <h3>Stock List</h3>
         <div className="ingredients-box-1">
           {menus.map((item) => (
-            <MenuItem key={item.id} item={item} />
+            <MenuItem key={item.id} item={item} setStocks={setStocks} />
           ))}
         </div>
       </div>

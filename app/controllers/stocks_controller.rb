@@ -27,7 +27,7 @@ class StocksController < ApplicationController
     def update 
         stock = Stock.find_by_id(params[:id])
         if stock
-            stock.update(likes)
+            stock.update(amount)
             render json: stock
         else
             render json: {error: 'stock not found'}, status: :not_found
@@ -47,7 +47,12 @@ class StocksController < ApplicationController
 
 
     private
+
     def stock_params
         params.permit(:user_id, :ingredient_id, :amount, :all_day, :all_day_amount)
+    end
+
+    def amount
+        params.permit(:amount)
     end
 end
