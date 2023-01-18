@@ -49,11 +49,13 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
     <div className="box-box">
       <RecipeContainer recipes={recipes}/>
       <div className="stock-box">
-        <h3>Stock List</h3>
-        <div className="ingredients-box-1">
-        <div className="search-container">
-         <input className="search-bar" type="text" placeholder="search..." value={searchRecipes} onChange={handleRecipeSearch}/>
+        {/* <h3>Stock List</h3> */}
+        <input className="search-bar" type="text" placeholder="search..." value={searchRecipes} onChange={handleRecipeSearch}/>
             <button onSubmit={handleRecipeSubmit} type="submit" className='search-btn'>Search Recipes</button>
+        <div className="ingredients-box-1">
+        
+        <div className="search-container">
+         
           </div>
           {menus.map((item) => (
             <MenuItem key={item.id} item={item} setStocks={setStocks} />

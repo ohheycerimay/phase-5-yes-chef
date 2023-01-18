@@ -9,6 +9,7 @@ import LogoutPage from './components/LogoutPage';
 import SignUp from './components/SignUp';
 import OrderForm from './components/OrderForm';
 import NavBar from './components/NavBar';
+import Profile from './components/Profile';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
         <Route exact path="/signup" element={<SignUp onSignUp={setUser}/>}/>
         <Route path="/ingredients" element={<ListContainer ingredients={searchIngredients} handleDeleteIngredient={handleDeleteIngredient} search={search} setSearch={setSearch} searchRecipes={searchRecipes} setSearchRecipes={setSearchRecipes} recipes={lookUpRecipe}/>}/>
         <Route path="/recipes" element={<Recipe/>}/>
+        <Route path="/profile" element={<Profile user={user}/>}/>
         <Route path="/orderform" element={<OrderForm user={user} setIngredients={setIngredients} ingredients={ingredients}/>}/>
         <Route path="/logout" element={<LogoutPage user={user} setUser = {setUser}/>}/>
         <Route path="*" element={<NotFound/>} />

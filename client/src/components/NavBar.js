@@ -7,12 +7,13 @@ function NavBar({ user }) {
       <div className="nav-background">
         {user ? (
           <div className="profile_container">
-            <img
+            <NavLink to={'/profile'}>
+              <img
               className="profile_pic"
               src={user.profile_pic}
-              alt={user.username}
-            />
-            {/* <h4 className='profile_greeting'>{user.username}</h4> */}
+              alt={user.username}/>
+            
+            </NavLink>
             <NavLink className="logout-button" to="/logout">
               Logout
             </NavLink>

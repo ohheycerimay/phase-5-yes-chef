@@ -196,11 +196,17 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.nav-background{
+.display-pic{
+  border-radius: 50%;
+  height: 600px;
+  width: 800px;
+}
+
+/* .nav-background{
   background: #fadb6a;
   opacity: 0.8;
   border: 2px solid #e6e2e0;
-}
+} */
 
 div.big-ingredients-box {
   /* border: 2px solid blue; */
@@ -401,3 +407,12 @@ input.search-bar{
   font-size: 1.2em;
 }
 
+.recipe-menu{
+  font-family: "Gv. time";
+  font-size: 1.4em;
+  color: #6b724e;
+  background-color: #fadb6a;
+  border: 2px solid #e6e2e0;
+  /* opacity: 0.9%; */
+  height: 50px;
+}

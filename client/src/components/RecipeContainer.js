@@ -7,6 +7,7 @@ function RecipeContainer({recipes}) {
 
     return (
         <div>
+            <h3>Today's Menu</h3>
             {
             recipes.map((recipe) => <Recipe key={recipe.id} recipe={recipe}/>)   
             }
