@@ -3,7 +3,7 @@ import List from "./List";
 import MenuItem from "./MenuItem";
 import RecipeContainer from "./RecipeContainer";
 
-function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch, searchRecipes, setSearchRecipes, lookUpRecipe }) {
+function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch, searchRecipes, setSearchRecipes, recipes }) {
   const [stocks, setStocks] = useState([]);
   const [menus, setMenus] = useState([]);
   console.log(menus);
@@ -47,7 +47,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
 
   return (
     <div className="box-box">
-      <RecipeContainer lookUpRecipe={lookUpRecipe}/>
+      <RecipeContainer recipes={recipes}/>
       <div className="stock-box">
         <h3>Stock List</h3>
         <div className="ingredients-box-1">
