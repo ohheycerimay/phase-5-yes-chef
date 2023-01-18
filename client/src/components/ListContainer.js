@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import List from "./List";
 import MenuItem from "./MenuItem";
+import RecipeContainer from "./RecipeContainer";
 
-function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch }) {
+function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch, searchRecipes, setSearchRecipes, lookUpRecipe }) {
   const [stocks, setStocks] = useState([]);
   const [menus, setMenus] = useState([]);
   console.log(menus);
@@ -12,6 +13,8 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch 
       .then((r) => r.json())
       .then((data) => setStocks(data));
   }, []);
+
+
 
   const receiveClickedOnIngredient = (nameOfIngredient) => {
     console.log(nameOfIngredient);
@@ -24,6 +27,15 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch 
     setMenus([...menus, resultOfFind]);
   };
 
+    function handleRecipeSearch(e) {
+    e.preventDefault() 
+    setSearchRecipes(e.target.value)
+  }
+ 
+  function handleRecipeSubmit() {
+    setSearchRecipes('');
+  }
+
   function handleSearch(e) {
     e.preventDefault() 
     setSearch(e.target.value)
@@ -35,9 +47,14 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch 
 
   return (
     <div className="box-box">
+      <RecipeContainer lookUpRecipe={lookUpRecipe}/>
       <div className="stock-box">
         <h3>Stock List</h3>
         <div className="ingredients-box-1">
+        <div className="search-container">
+         <input className="search-bar" type="text" placeholder="search..." value={searchRecipes} onChange={handleRecipeSearch}/>
+            <button onSubmit={handleRecipeSubmit} type="submit" className='search-btn'>Search Recipes</button>
+          </div>
           {menus.map((item) => (
             <MenuItem key={item.id} item={item} setStocks={setStocks} />
           ))}

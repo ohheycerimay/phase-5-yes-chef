@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function NavBar({ user }) {
   return (
     <>
-      <div>
+      <div className="nav-background">
         {user ? (
           <div className="profile_container">
             <img

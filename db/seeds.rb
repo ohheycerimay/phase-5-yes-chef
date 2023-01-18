@@ -101,3 +101,13 @@ s39= Stock.create(user_id: u1.id, ingredient_id: i39.id, amount:1, all_day_amoun
 s40= Stock.create(user_id: u1.id, ingredient_id: i40.id, amount:1, all_day_amount:100, all_day: false)
 
 puts "Finished stock!"
+
+puts "Seeding recipes...🥖"
+
+r1= Recipe.create(name: "Tagliatelle Nere", user_id: u1.id)
+r2= Recipe.create(name: "Malloreddus Alla Campidanese", user_id: u1.id)
+r2= Recipe.create(name: "Spaghetti Cacio e Pepe", user_id: u1.id)
+r2= Recipe.create(name: "Creekstone Farm Hanger Steak", user_id: u1.id)
+r2= Recipe.create(name: "Brasato al Cannonau", user_id: u1.id)
+
+puts "Recipes seeded!"

@@ -4,6 +4,7 @@ import ListContainer from './components/ListContainer';
 import UserLogin from './components/UserLogin';
 import {Route, Routes} from 'react-router-dom';
 import NotFound from './components/NotFound';
+import RecipeContainer from './components/RecipeContainer';
 import LogoutPage from './components/LogoutPage';
 import SignUp from './components/SignUp';
 import OrderForm from './components/OrderForm';
@@ -14,6 +15,14 @@ function App() {
   const [ingredients, setIngredients] = useState([])
   const [user, setUser] = useState(null)
   const [search, setSearch] = useState('')
+  const [recipes, setRecipes] = useState([])
+  const [searchRecipes, setSearchRecipes] = useState('')
+
+  useEffect(() => {
+      fetch(`/recipes`)
+      .then(response => response.json())
+      .then(data => setRecipes(data))
+  }, [])
 
   useEffect(() => {
     (async () => {
@@ -35,7 +44,7 @@ function App() {
 
   const searchIngredients = ingredients.filter((ingredient) => ingredient.name.toLowerCase().includes(search.toLowerCase()))
 
-
+  const lookUpRecipe = recipes.filter((recipe) => recipe.name.toLowerCase().includes(searchRecipes.toLowerCase()))
 
   return (
     <div className="App">
@@ -43,7 +52,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<UserLogin onLogin={setUser}/>}/>
         <Route exact path="/signup" element={<SignUp onSignUp={setUser}/>}/>
-        <Route path="/ingredients" element={<ListContainer ingredients={searchIngredients} handleDeleteIngredient={handleDeleteIngredient} search={search} setSearch={setSearch}/>}/>
+        <Route path="/ingredients" element={<ListContainer ingredients={searchIngredients} handleDeleteIngredient={handleDeleteIngredient} search={search} setSearch={setSearch} searchRecipes={searchRecipes} setSearchRecipes={setSearchRecipes} lookUpRecipe={lookUpRecipe}/>}/>
+        <Route path="/recipes" element={<RecipeContainer/>}/>
         <Route path="/orderform" element={<OrderForm user={user} setIngredients={setIngredients} ingredients={ingredients}/>}/>
         <Route path="/logout" element={<LogoutPage user={user} setUser = {setUser}/>}/>
         <Route path="*" element={<NotFound/>} />
