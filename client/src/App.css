@@ -416,3 +416,11 @@ input.search-bar{
   /* opacity: 0.9%; */
   height: 50px;
 }
+
+header{
+  font-family: "Gv. time";
+  font-size: 3.7em;
+  color: #6b724e;
+  display: flex;
+  justify-content: center;
+}

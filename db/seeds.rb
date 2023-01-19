@@ -3,6 +3,7 @@ puts "Destroying databases...🧨"
 User.destroy_all
 Ingredient.destroy_all
 Stock.destroy_all
+Recipe.destroy_all
 
 puts "Done!"
 

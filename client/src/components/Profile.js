@@ -13,7 +13,7 @@ const [user, setUser] = useState([]);
 
     return (
         <div>
-            <h3>Complimenti alla cuoca! 🤌🏼</h3>
+            <header>Complimenti alla cuoca! 🤌🏼</header>
             <h3>{user.name}</h3>
             <img className="display-pic" src={user.profile_pic} alt={user.username}/>
         </div>

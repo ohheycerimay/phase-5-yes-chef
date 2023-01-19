@@ -27,6 +27,7 @@ function NavBar({ user }) {
           <div></div>
         )}
       </div>
+      <header>Yes Chef!</header>
     </>
   );
 }
