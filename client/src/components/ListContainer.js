@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import List from "./List";
 import MenuItem from "./MenuItem";
 import RecipeContainer from "./RecipeContainer";
+import RecipeIngredientItem from "./RecipeIngredientItem";
 
 function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch, searchRecipes, setSearchRecipes, recipes }) {
   const [stocks, setStocks] = useState([]);
   const [menus, setMenus] = useState([]);
-  console.log(menus);
+  const [recipeWithIngredients, setRecipeWithIngredients] = useState({name:"Choose A Recipe", ingredients_with_details:[]})
+  console.log(recipeWithIngredients)
 
   useEffect(() => {
     fetch("/stocks")
@@ -47,7 +49,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
 
   return (
     <div className="box-box">
-      <RecipeContainer recipes={recipes}/>
+      <RecipeContainer setRecipeWithIngredients={setRecipeWithIngredients} recipes={recipes}/>
       <div className="stock-box">
         {/* <h3>Stock List</h3> */}
         <input className="search-bar" type="text" placeholder="search recipes" value={searchRecipes} onChange={handleRecipeSearch}/>
@@ -55,7 +57,14 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
         <div className="ingredients-box-1">
         
         <div className="search-container">
-         
+         <div>
+            <h2>
+              {recipeWithIngredients.name}
+            </h2>
+          {
+            recipeWithIngredients.ingredients_with_details.map((recipeIngredient) => <RecipeIngredientItem key={recipeIngredient.id} ingredientWithAmount={recipeIngredient}/>)
+          }
+         </div>
           </div>
           {menus.map((item) => (
             <MenuItem key={item.id} item={item} setStocks={setStocks} />

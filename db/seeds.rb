@@ -112,3 +112,17 @@ r2= Recipe.create(name: "Creekstone Farm Hanger Steak", user_id: u1.id)
 r2= Recipe.create(name: "Brasato al Cannonau", user_id: u1.id)
 
 puts "Recipes seeded!"
+
+puts "Seeding recipe ingredients..."
+
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i3.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i4.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i22.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i23.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i26.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i29.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i7.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i10.id, instruction: "", amount_needed: 2)
+
+
+puts "Recipe ingredients seeded!"
