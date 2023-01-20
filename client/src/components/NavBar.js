@@ -4,30 +4,33 @@ import { NavLink } from "react-router-dom";
 function NavBar({ user }) {
   return (
     <>
-      <div className="nav-background">
+      <div className="nav">
+      {/* <header>Yes Chef!</header> */}
         {user ? (
+          
           <div className="profile_container">
-            <NavLink to={'/profile'}>
+            <NavLink className="navlink" to={'/profile'}>
               <img
               className="profile_pic"
               src={user.profile_pic}
               alt={user.username}/>
             
             </NavLink>
-            <NavLink className="logout-button" to="/logout">
+            <NavLink className="navlink" to="/logout">
               Logout
             </NavLink>
             <div>
-              <NavLink className="order-form-link" to="/orderform">
+              <NavLink className="navlink" to="/orderform">
                 Order Form
               </NavLink>
             </div>
+            
           </div>
         ) : (
           <div></div>
         )}
       </div>
-      <header>Yes Chef!</header>
+      
     </>
   );
 }
