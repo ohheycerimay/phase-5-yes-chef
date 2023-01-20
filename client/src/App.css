@@ -50,9 +50,14 @@ table {
 
 
 body {
-  background-image: url("https://wallpaper.dog/large/20449802.jpg");
+  /* background-image: url("https://wallpaper.dog/large/20449802.jpg"); */
+  background-image: url("https://wallpapers.com/images/hd/70s-multicolor-retro-stripes-m3rvq1oc35szq2b5.jpg");
   opacity: 4;
   /* background-color: #Fa9584; */
+}
+.logo{
+  height: 170px;
+  width: 170px;
 }
 
 .stock-image {
