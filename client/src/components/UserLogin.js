@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import YesChef from "./Yes Chef.png"
 
 function UserLogin({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -34,9 +35,9 @@ function UserLogin({ onLogin }) {
 
   return (
     <nav>
-      <Link className="signup-link" to="/signup">
-        Not already a user? Sign up!
-      </Link>
+      <div className="login-container">
+      <img className="main-logo" src={YesChef} alt="YesChef"/>
+      <div className="login-form-box">
       <form className="login-form" onSubmit={handleSubmit}>
         <label className="login-username" htmlFor="username">Username</label>
         <input
@@ -66,7 +67,14 @@ function UserLogin({ onLogin }) {
           <error key={err}>{err}</error>
         ))}
       </form>
+      </div>
+      <Link className="signup-link" to="/signup">
+        Not already a user? Sign up!
+      </Link>
+      
+      </div>
     </nav>
+
   );
 }
 

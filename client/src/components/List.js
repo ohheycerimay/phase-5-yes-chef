@@ -35,7 +35,7 @@ function List({
       </div>
       <h4>
         <h4 className="ingredient-name">{ingredient.name}</h4>
-        <button className="ingredient-delete-button" onClick={() => handleDelete(ingredient.id)}>🧄</button>
+        <button className="button-57" onClick={() => handleDelete(ingredient.id)}>𝟠𝟞</button>
       </h4>
     </div>
   );

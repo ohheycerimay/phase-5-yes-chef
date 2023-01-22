@@ -54,11 +54,14 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
       {/* <RecipeContainer setRecipeWithIngredients={setRecipeWithIngredients} recipes={recipes}/> */}
       <div className="stock-box">
         {/* <h3>Stock List</h3> */}
-        <input className="search-bar" type="text" placeholder="search recipes" value={searchRecipes} onChange={handleRecipeSearch}/>
+        <div className="search-container">
+        <input className="search-bar-1" type="text" placeholder="search recipes" value={searchRecipes} onChange={handleRecipeSearch}/>
+        
             <button onSubmit={handleRecipeSubmit} type="submit" className='search-btn'>Search</button>
+            </div>
         <div className="ingredients-box-1">
         
-        <div className="search-container">
+        
           {/* <div className="recipe-container">
          <div className="recipe-div">
             <h2>
@@ -73,17 +76,17 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
             <MenuItem key={item.id} item={item} setStocks={setStocks} />
           ))}
         </div>
-        </div>
+        
       </div>
       <div className="big-ingredients-box">
-        <div className="container-header">
+        {/* <div className="container-header"> */}
           {/* <h3>Ingredients</h3> */}
         <div className="search-container">
 
-          <input className="search-bar" type="text" placeholder="search ingredients" value={search} onChange={handleSearch}/>
+          <input className="search-bar-2" type="text" placeholder="search ingredients" value={search} onChange={handleSearch}/>
       <button onSubmit={handleSubmit} type="submit" className='search-btn'>Search</button>
         </div>
-        </div>
+        {/* </div> */}
         <div className="ingredients-box">
           {ingredients.map((ingredient) => (
             <List
