@@ -57,7 +57,8 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
         <div className="ingredients-box-1">
         
         <div className="search-container">
-         <div>
+          <div className="recipe-container">
+         <div className="recipe-div">
             <h2>
               {recipeWithIngredients.name}
             </h2>
@@ -69,6 +70,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
           {menus.map((item) => (
             <MenuItem key={item.id} item={item} setStocks={setStocks} />
           ))}
+        </div>
         </div>
       </div>
       <div className="big-ingredients-box">

@@ -38,9 +38,9 @@ function UserLogin({ onLogin }) {
         Not already a user? Sign up!
       </Link>
       <form className="login-form" onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label className="login-username" htmlFor="username">Username</label>
         <input
-          class="username"
+          class="login-username"
           type="text"
           id="username"
           autoComplete="off"
@@ -48,7 +48,7 @@ function UserLogin({ onLogin }) {
           onChange={(e) => setUsername(e.target.value)}
         />
 
-        <label htmlFor="password">Password</label>
+        <label className="login-password" htmlFor="password">Password</label>
         <input
           class="password"
           type="password"
@@ -58,7 +58,7 @@ function UserLogin({ onLogin }) {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button variant="fill" color="primary" type="submit">
+        <button className="login-button" variant="fill" color="primary" type="submit">
           {isLoading ? "Loading..." : "Login"}
         </button>
 
