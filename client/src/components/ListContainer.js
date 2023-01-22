@@ -3,12 +3,13 @@ import List from "./List";
 import MenuItem from "./MenuItem";
 import RecipeContainer from "./RecipeContainer";
 import RecipeIngredientItem from "./RecipeIngredientItem";
+import RecipeDetail from "./RecipeDetail";
 
 function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch, searchRecipes, setSearchRecipes, recipes }) {
   const [stocks, setStocks] = useState([]);
   const [menus, setMenus] = useState([]);
-  const [recipeWithIngredients, setRecipeWithIngredients] = useState({name:"Choose A Recipe", ingredients_with_details:[]})
-  console.log(recipeWithIngredients)
+  // const [recipeWithIngredients, setRecipeWithIngredients] = useState({name:"Choose A Recipe", ingredients_with_details:[]})
+  
 
   useEffect(() => {
     fetch("/stocks")
@@ -49,7 +50,8 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
 
   return (
     <div className="box-box">
-      <RecipeContainer setRecipeWithIngredients={setRecipeWithIngredients} recipes={recipes}/>
+      <RecipeDetail recipes={recipes}/>
+      {/* <RecipeContainer setRecipeWithIngredients={setRecipeWithIngredients} recipes={recipes}/> */}
       <div className="stock-box">
         {/* <h3>Stock List</h3> */}
         <input className="search-bar" type="text" placeholder="search recipes" value={searchRecipes} onChange={handleRecipeSearch}/>
@@ -57,7 +59,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
         <div className="ingredients-box-1">
         
         <div className="search-container">
-          <div className="recipe-container">
+          {/* <div className="recipe-container">
          <div className="recipe-div">
             <h2>
               {recipeWithIngredients.name}
@@ -66,7 +68,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
             recipeWithIngredients.ingredients_with_details.map((recipeIngredient) => <RecipeIngredientItem key={recipeIngredient.id} ingredientWithAmount={recipeIngredient}/>)
           }
          </div>
-          </div>
+          </div> */}
           {menus.map((item) => (
             <MenuItem key={item.id} item={item} setStocks={setStocks} />
           ))}
