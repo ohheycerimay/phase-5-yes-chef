@@ -40,6 +40,8 @@ function SignUp({ onSignUp }) {
     });
   }
 
+  console.log(profile_pic)
+
   return (
     <div className="signup-body">
     <div className="signup-form-container">
@@ -73,8 +75,9 @@ function SignUp({ onSignUp }) {
         autoComplete="current-password"
       />
 
-      <label htmlFor="profile_pic">Profile Picture URL</label>
+      <label htmlFor="profile_pic">Upload Profile Picture</label>
       <input
+        className="upload-btn"
         class="profile-pic"
         type="text"
         id="profile_pic"
