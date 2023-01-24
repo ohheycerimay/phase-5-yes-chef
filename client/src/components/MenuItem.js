@@ -27,7 +27,7 @@ function MenuItem({ item, setStocks }) {
       <div>
         <span className="label">Amount: </span><span>{item.amount}</span>
         <span className="label">All day amount: </span><span>{item.all_day_amount}</span>
-        <button className='stat-button' onClick={()=>updateMenuItem(item)}>Update</button>
+        <button className='stat-button' onClick={()=>updateMenuItem(item)}>Add To List</button>
       </div>
     </div>
   );

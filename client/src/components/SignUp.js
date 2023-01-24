@@ -41,6 +41,8 @@ function SignUp({ onSignUp }) {
   }
 
   return (
+    <div className="signup-body">
+    <div className="signup-form-container">
     <form class="signup-form" onSubmit={handleSubmit}>
       <label htmlFor="username">Username</label>
       <input
@@ -86,6 +88,8 @@ function SignUp({ onSignUp }) {
           <error key={err}>{err}</error>
         ))} */}
     </form>
+    </div>
+    </div>
   );
 }
 

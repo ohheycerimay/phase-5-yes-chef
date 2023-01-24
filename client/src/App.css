@@ -164,6 +164,25 @@ body {
 
 /* SIGN UP FORM */
 
+.signup-body{
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form-container {
+  background: #fadb6a;
+  opacity: 0.8;
+  border: 2px solid #e6e2e0;
+  width: 550px;
+  height: 620px;
+  margin: 50px 0 50px 0;
+  flex-wrap: wrap;
+  border-radius: 10%;
+  /* overflow-y: scroll; */
+  display: flex;
+  justify-content: center;
+}
+
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -273,10 +292,37 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+.profile{
+  background: #fadb6a;
+  opacity: 0.8;
+  border: 2px solid #e6e2e0;
+  width: 550px;
+  height: 480px;
+  margin: 50px 0 50px 0;
+  flex-wrap: wrap;
+  border-radius: 10%;
+  /* overflow-y: scroll; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .display-pic{
   border-radius: 50%;
   height: 600px;
   width: 800px;
+  margin-right: 100px;
+}
+
+.profile-bio{
+  display: flex;
+  flex-direction: column;
 }
 
 /* .nav-background{
@@ -291,9 +337,6 @@ div.big-ingredients-box {
   flex-direction: column;
 }
 
-div, h3 {
-  /* border: 1px solid red; */
-}
 
 .container-header {
   display: flex;
@@ -313,7 +356,7 @@ div.search-container {
 .search-bar-1{
  height: 30px;
  width: 7px;
-
+ /* border-radius: 50%; */
 }
 
 .search-bar-2{
@@ -357,6 +400,7 @@ div.ingredient-card {
   display: flex;
   justify-content: center;
   height: 50px;
+  margin: 3px;
   /* border: 2px solid red; */
 }
 
@@ -373,12 +417,13 @@ div.ingredient-card {
 .ingredient-image {
   width: 50px;
   height: 50px;
+  margin: 4px;
   object-fit: cover;
   border-radius: 50%;
 }
 
 .ingredient-name {
-  margin: 0px;
+  margin: 4px;
   text-align: center;
   /* border: 1px solid gold; */
   font-family: "Gv. time";
@@ -532,6 +577,7 @@ header{
   color: #6b724e;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .create-form {
@@ -562,6 +608,21 @@ input[type="submit"] {
   margin-top: 20px;
   border: none;
   cursor: pointer;
+}
+
+.order-form-container{
+  background: #fadb6a;
+  opacity: 0.8;
+  border: 2px solid #e6e2e0;
+  width: 450px;
+  height: 320px;
+  align-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+  border-radius: 10%;
+  /* overflow-y: scroll; */
+  display: flex;
+  justify-content: center;
 }
 
 .create-button{

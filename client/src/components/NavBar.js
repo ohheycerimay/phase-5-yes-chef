@@ -12,6 +12,9 @@ function NavBar({ user }) {
            <div className="nav">
           {/* <div className="profile_container"> */}
             <img className="logo" src={YesChef} alt="YesChef"/>
+            <NavLink className="navlink" to="/ingredients">
+              Ingredients
+            </NavLink>
              <NavLink className="navlink" to="/orderform">
                 Order Form
               </NavLink>

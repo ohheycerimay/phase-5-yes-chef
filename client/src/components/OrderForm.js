@@ -37,9 +37,8 @@ function OrderForm({ user, ingredients, setIngredients }) {
 
   return (
     <div>
-      <Link className="ingredients-link" to="/ingredients">
-        Go Back
-      </Link>
+    <div className="order-form-container">
+      
       <div className="create-form">
         <form id="form" onSubmit={handleSubmit}>
           <input
@@ -71,6 +70,12 @@ function OrderForm({ user, ingredients, setIngredients }) {
           </button>
         </form>
       </div>
+      
+    </div>
+    <Link className="ingredients-link" to="/ingredients">
+        Go Back
+      </Link>
+
     </div>
   );
 }

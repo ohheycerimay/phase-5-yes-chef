@@ -55,6 +55,9 @@ i37= Ingredient.create(name:"pomegranate", image_url:"https://afoodcentriclife.c
 i38= Ingredient.create(name:"brussel sprouts", image_url:"https://kirbiecravings.com/wp-content/uploads/2016/11/spicy-garlic-brussels-sprouts-stalk-17.jpg", category:"produce")
 i39= Ingredient.create(name:"blood orange", image_url:"https://www.linsfood.com/wp-content/uploads/2020/03/Blood-oranmge-slices.jpg", category:"produce")
 i40= Ingredient.create(name:"asparagus", image_url:"https://www.feastingathome.com/wp-content/uploads/2020/03/roasted-asparagus-7-1.jpg", category:"produce")
+i41= Ingredient.create(name: "pepper", image_url:"https://images.theconversation.com/files/455247/original/file-20220330-5922-am025n.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop", category:"pantry")
+i42= Ingredient.create(name: "italian sausage", image_url:"https://www.meatsandsausages.com/public/images/sausage-recipes/italian-sausage-1.jpg", category: "meat/poultry")
+i43= Ingredient.create(name: "red wine", image_url:"https://cdn.shopify.com/s/files/1/1410/8098/products/riunite_lambrusco.JPG?v=1626067376", category:"pantry")
 
 puts "Finished ingredients!"
 
@@ -100,6 +103,10 @@ s37= Stock.create(user_id: u1.id, ingredient_id: i37.id, amount:1, all_day_amoun
 s38= Stock.create(user_id: u1.id, ingredient_id: i38.id, amount:1, all_day_amount:100, all_day: false)
 s39= Stock.create(user_id: u1.id, ingredient_id: i39.id, amount:1, all_day_amount:100, all_day: false)
 s40= Stock.create(user_id: u1.id, ingredient_id: i40.id, amount:1, all_day_amount:100, all_day: false)
+s41= Stock.create(user_id: u1.id, ingredient_id: i41.id, amount:1, all_day_amount:100, all_day: false)
+s42= Stock.create(user_id: u1.id, ingredient_id: i42.id, amount:1, all_day_amount:100, all_day: false)
+s43= Stock.create(user_id: u1.id, ingredient_id: i43.id, amount:1, all_day_amount:100, all_day: false)
+
 
 puts "Finished stock!"
 
@@ -107,13 +114,15 @@ puts "Seeding recipes...🥖"
 
 r1= Recipe.create(name: "Tagliatelle Nere", user_id: u1.id)
 r2= Recipe.create(name: "Malloreddus Alla Campidanese", user_id: u1.id)
-r2= Recipe.create(name: "Spaghetti Cacio e Pepe", user_id: u1.id)
-r2= Recipe.create(name: "Creekstone Farm Hanger Steak", user_id: u1.id)
-r2= Recipe.create(name: "Brasato al Cannonau", user_id: u1.id)
+r3= Recipe.create(name: "Spaghetti Cacio e Pepe", user_id: u1.id)
+r4= Recipe.create(name: "Creekstone Farm Hanger Steak", user_id: u1.id)
+r5= Recipe.create(name: "Brasato al Cannonau", user_id: u1.id)
 
 puts "Recipes seeded!"
 
 puts "Seeding recipe ingredients..."
+
+puts "Seeding Tagliatelle Nere..."
 
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i3.id, instruction: "", amount_needed: 2)
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i4.id, instruction: "", amount_needed: 2)
@@ -124,5 +133,50 @@ RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i29.id, instruction: ""
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i7.id, instruction: "", amount_needed: 2)
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i10.id, instruction: "", amount_needed: 2)
 
+puts "Nere seeded!"
 
-puts "Recipe ingredients seeded!"
+puts "Seeding Malloreddus alla Campidanese"
+
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i1.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i16.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i28.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i30.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i24.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i29.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i42.id, instruction: "", amount_needed: 2)
+
+puts "Malloreddus seeded!"
+
+puts "Seeding Cacio e Pepe!"
+
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i2.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i15.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i17.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i41.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i23.id, instruction: "", amount_needed: 2)
+
+puts "Cacio seeded!"
+
+puts "Seeding Hanger Steak!"
+
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i11.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i29.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i30.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i34.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i41.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i43.id, instruction: "", amount_needed: 2)
+
+puts "Steak seeded!"
+
+puts "Seeding Brasato al Cannonau"
+
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i12.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i43.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i27.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i28.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i33.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i38.id, instruction: "", amount_needed: 2)
+
+puts "Brasato seeded!"
+
+puts "ALL Recipe ingredients seeded!"
