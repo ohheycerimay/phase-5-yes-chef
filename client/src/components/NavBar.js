@@ -5,9 +5,7 @@ import YesChef from "./Yes Chef.png"
 function NavBar({ user }) {
   return (
     <>
-      {/* <div className="nav-container"> */}
      
-      {/* <header>Yes Chef!</header> */}
         {user ? (
            <div className="nav">
           {/* <div className="profile_container"> */}

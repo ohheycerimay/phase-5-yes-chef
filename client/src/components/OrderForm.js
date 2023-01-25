@@ -36,7 +36,7 @@ function OrderForm({ user, ingredients, setIngredients }) {
   };
 
   return (
-    <div>
+    <div className="mega-div">
     <div className="order-form-container">
       
       <div className="create-form">
@@ -69,8 +69,9 @@ function OrderForm({ user, ingredients, setIngredients }) {
             Create Ingredient
           </button>
         </form>
+     
       </div>
-      
+     
     </div>
     <Link className="ingredients-link" to="/ingredients">
         Go Back
