@@ -27,11 +27,15 @@ class StocksController < ApplicationController
     def update 
         stock = Stock.find_by_id(params[:id])
         if stock
-            stock.update(amount)
-            render json: stock
+            if stock.update(amount)
+                render json: stock
+            else
+                render json: {message: "MAYBE THIS IS A CLUE"}, status: 422
+            end
         else
             render json: {error: 'stock not found'}, status: :not_found
         end
+    
     end
 
     def destroy

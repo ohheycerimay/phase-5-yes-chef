@@ -17,10 +17,11 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
       .then((data) => setStocks(data));
   }, []);
 
-
+//  console.log(stocks)
 
   const receiveClickedOnIngredient = (nameOfIngredient) => {
-    console.log(nameOfIngredient);
+
+ console.log(stocks)
     let resultOfFind = stocks.find((eachStock) => {
       // console.log(eachStock.ingredient.name)
       if (nameOfIngredient == eachStock.ingredient.name) return eachStock;

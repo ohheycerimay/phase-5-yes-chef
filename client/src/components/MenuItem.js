@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 const headers = {
-  Accepts: "application/json",
+  Accept: "application/json",
       "Content-Type" : "application/json"}
 
 function MenuItem({ item, setStocks }) {
@@ -14,10 +14,18 @@ function MenuItem({ item, setStocks }) {
         method: "PATCH",
         headers,
         body: JSON.stringify({ amount: ++item.amount}),
-      }).then((r) =>r.json())
-      .then(((data)=>{
-          setMenuItemData({...data})
-      }))
+      }).then((r) => {
+        if (r.ok ) {
+          r.json().then((data)=>{
+            setMenuItemData(data)
+          })
+        } else {
+          console.warn("something bad happened")
+        }
+        
+      })
+
+     
   }
 
   return (
