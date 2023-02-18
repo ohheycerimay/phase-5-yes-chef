@@ -8,7 +8,7 @@ function NavBar({ user }) {
      
         {user ? (
            <div className="nav">
-          {/* <div className="profile_container"> */}
+    
             <img className="logo" src={YesChef} alt="YesChef"/>
             <NavLink className="navlink" to="/ingredients">
               Ingredients
@@ -37,8 +37,7 @@ function NavBar({ user }) {
           <div> </div>
           
         )}
-        {/* </div> */}
-      
+        
      
      
     </>

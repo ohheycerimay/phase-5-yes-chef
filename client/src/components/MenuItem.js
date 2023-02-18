@@ -30,12 +30,12 @@ function MenuItem({ item, setStocks }) {
 
   return (
     <div className="stock-card">
-      {/* <img className="stock-image" src={item.ingredient.image_url} /> */}
+   
       <h4>{item.ingredient.name}</h4>
       <div>
         <span className="label">Amount: </span><span>{item.amount}</span>
         <span className="label">Amount In Stock: </span><span>{item.all_day_amount - item.amount}</span>
-        <button className='search-btn' onClick={()=>updateMenuItem(item)}>Add To List</button>
+        <button className='ingredient-btn' onClick={()=>updateMenuItem(item)}>Add</button>
       </div>
     </div>
   );

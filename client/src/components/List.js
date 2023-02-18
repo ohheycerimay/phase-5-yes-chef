@@ -19,14 +19,15 @@ function List({
     });
   }
 
-  // boolean prop "selected"
+  
 
   return (
     <div
-      className={selected ? 'ingredient-card selected' : 'ingredient-card'}
-      onClick={(e) => receiveClickedOnIngredient(ingredient.name)}
+    className={selected ? 'ingredient-card selected' : 'ingredient-card'}
+    
     >
-      <div className="image-container">
+      <div className="image-container"  onClick={(e) => receiveClickedOnIngredient(ingredient.name)} >
+
         <img
           className="ingredient-image"
           src={ingredient.image_url}

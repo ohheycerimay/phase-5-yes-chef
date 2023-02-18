@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import List from "./List";
 import MenuItem from "./MenuItem";
-import RecipeContainer from "./RecipeContainer";
-import RecipeIngredientItem from "./RecipeIngredientItem";
 import RecipeDetail from "./RecipeDetail";
 
 function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch, searchRecipes, setSearchRecipes, recipes }) {
@@ -17,14 +15,19 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
       .then((data) => setStocks(data));
   }, []);
 
-//  console.log(stocks)
+
 
   const receiveClickedOnIngredient = (nameOfIngredient) => {
 
  console.log(stocks)
     let resultOfFind = stocks.find((eachStock) => {
-      // console.log(eachStock.ingredient.name)
-      if (nameOfIngredient == eachStock.ingredient.name) return eachStock;
+
+      if (eachStock && eachStock.ingredient){
+        
+        if (nameOfIngredient == eachStock.ingredient.name) return eachStock;
+
+      }
+      
     });
     console.log(resultOfFind);
     //if resultOfFind is null - this will break!
@@ -52,9 +55,9 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
   return (
     <div className="box-box">
       <RecipeDetail recipes={recipes}/>
-      {/* <RecipeContainer setRecipeWithIngredients={setRecipeWithIngredients} recipes={recipes}/> */}
+     
       <div className="stock-box">
-        {/* <h3>Stock List</h3> */}
+      
         <div className="search-container">
         <input className="search-bar-1" type="text" placeholder="search recipes" value={searchRecipes} onChange={handleRecipeSearch}/>
         
@@ -63,16 +66,7 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
         <div className="ingredients-box-1">
         
         
-          {/* <div className="recipe-container">
-         <div className="recipe-div">
-            <h2>
-              {recipeWithIngredients.name}
-            </h2>
-          {
-            recipeWithIngredients.ingredients_with_details.map((recipeIngredient) => <RecipeIngredientItem key={recipeIngredient.id} ingredientWithAmount={recipeIngredient}/>)
-          }
-         </div>
-          </div> */}
+         
           {menus.map((item) => (
             <MenuItem key={item.id} item={item} setStocks={setStocks} />
           ))}
@@ -80,14 +74,13 @@ function ListContainer({ ingredients, handleDeleteIngredient, search, setSearch,
         
       </div>
       <div className="big-ingredients-box">
-        {/* <div className="container-header"> */}
-          {/* <h3>Ingredients</h3> */}
+      
         <div className="search-container">
 
           <input className="search-bar-2" type="text" placeholder="search ingredients" value={search} onChange={handleSearch}/>
       <button onSubmit={handleSubmit} type="submit" className='search-btn'>Search</button>
         </div>
-        {/* </div> */}
+       
         <div className="ingredients-box">
           {ingredients.map((ingredient) => (
             <List

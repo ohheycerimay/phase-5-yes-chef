@@ -105,7 +105,7 @@ s39= Stock.create(user_id: u1.id, ingredient_id: i39.id, amount:1, all_day_amoun
 s40= Stock.create(user_id: u1.id, ingredient_id: i40.id, amount:1, all_day_amount:100, all_day: false)
 s41= Stock.create(user_id: u1.id, ingredient_id: i41.id, amount:1, all_day_amount:100, all_day: false)
 s42= Stock.create(user_id: u1.id, ingredient_id: i42.id, amount:1, all_day_amount:100, all_day: false)
-s43= Stock.create(user_id: u1.id, ingredient_id: i43.id, amount:1, all_day_amount:100, all_day: false)
+s43= Stock.create(user_id: u1.id, ingredient_id: i43.id, amount:1, all_day_amount:6, all_day: false)
 
 
 puts "Finished stock!"
@@ -125,56 +125,56 @@ puts "Seeding recipe ingredients..."
 puts "Seeding Tagliatelle Nere..."
 
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i3.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i4.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i4.id, instruction: "", amount_needed: 3)
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i22.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i23.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i26.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i29.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i7.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i23.id, instruction: "", amount_needed: 5)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i26.id, instruction: "", amount_needed: 3)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i29.id, instruction: "", amount_needed: 1)
+RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i7.id, instruction: "", amount_needed: 4)
 RecipeIngredient.create(recipe_id: r1.id, ingredient_id: i10.id, instruction: "", amount_needed: 2)
 
 puts "Nere seeded!"
 
 puts "Seeding Malloreddus alla Campidanese"
 
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i1.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i1.id, instruction: "", amount_needed: 4)
 RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i16.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i28.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i28.id, instruction: "", amount_needed: 3)
 RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i30.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i24.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i29.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i42.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i24.id, instruction: "", amount_needed: 1)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i29.id, instruction: "", amount_needed: 4)
+RecipeIngredient.create(recipe_id: r2.id, ingredient_id: i42.id, instruction: "", amount_needed: 4)
 
 puts "Malloreddus seeded!"
 
 puts "Seeding Cacio e Pepe!"
 
-RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i2.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i2.id, instruction: "", amount_needed: 5)
 RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i15.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i17.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i41.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i23.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i17.id, instruction: "", amount_needed: 4)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i41.id, instruction: "", amount_needed: 3)
+RecipeIngredient.create(recipe_id: r3.id, ingredient_id: i23.id, instruction: "", amount_needed: 3)
 
 puts "Cacio seeded!"
 
 puts "Seeding Hanger Steak!"
 
-RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i11.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i29.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i11.id, instruction: "", amount_needed: 6)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i29.id, instruction: "", amount_needed: 5)
 RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i30.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i34.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i41.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i34.id, instruction: "", amount_needed: 3)
+RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i41.id, instruction: "", amount_needed: 4)
 RecipeIngredient.create(recipe_id: r4.id, ingredient_id: i43.id, instruction: "", amount_needed: 2)
 
 puts "Steak seeded!"
 
 puts "Seeding Brasato al Cannonau"
 
-RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i12.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i12.id, instruction: "", amount_needed: 4)
 RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i43.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i27.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i28.id, instruction: "", amount_needed: 2)
-RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i33.id, instruction: "", amount_needed: 2)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i27.id, instruction: "", amount_needed: 5)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i28.id, instruction: "", amount_needed: 3)
+RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i33.id, instruction: "", amount_needed: 4)
 RecipeIngredient.create(recipe_id: r5.id, ingredient_id: i38.id, instruction: "", amount_needed: 2)
 
 puts "Brasato seeded!"
